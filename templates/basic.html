@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>heart-disease prediction</title>
+        <style>
+            h1{text-align:center;}
+        </style>
+    </head>
+    <body>
+        <h1 style="background-color:DodgerBlue;">HEART DISEASE PREDICTION ---------m.kiran</h1>
+        <h1 style="background-color:Tomato;">look at the submit button after pressing it to get DR.AI's report </h1>
+        <img  src="{{user_image}}" alt="Computer Man" align="right" style="width:370px;height:300px;">
+        <form action="/results" method="POST">
+        <label for="age_1"><b>AGE:</b></label><br>
+        <input type="number" id="age_1" name="cells1" value={{a}} ><br>
+
+
+        <h2>GENDER</h2>
+        <label for="male">Male:</label>
+        <input type="radio" id="male" name="cells2" value=1 >
+        <label for="female">Female:</label>
+        <input type="radio" id="female" name="cells2" value=0 checked>
+
+
+        <h2>CHEST PAIN</h2>
+        <label for="chestpain0">0</label>
+        <input type="radio" id="chestpain0" name="cells3" value=0>
+        <label for="chestpai10">1</label>
+        <input type="radio" id="chestpain1" name="cells3" value=1 checked>
+        <label for="chestpain2">2</label>
+        <input type="radio" id="chestpain2" name="cells3" value=2>
+        <label for="chestpain3">3</label>
+        <input type="radio" id="chestpain3" name="cells3" value=3><br><br>
+
+
+
+        <label for="rbp"><b>RESTING BLOOD PRESSURE</b></label><br>
+        <input type="number" id="rbp" name="cells4" value={{b}} ><br><br>
+
+        <label for="chol"><b>SERUM CHOLOSTROL(mg/dl)</b></label><br>
+        <input type="number" id="chol" name="cells5" value={{c}} ><br>
+
+        <h2><b>FASTING BLOOD SUGAR (>120)</b></h2>
+        <label for="yes">YES</label>
+        <input type="radio" id="yes" name="cells6"value=1 checked>
+        <label for="no">NO</label>
+        <input type="radio" id="no" name="cells6"value=0>
+
+
+        <h2>resting electrocardiographic results</h2>
+        <input type="radio" id='ecg_pain0' name="cells7"value=0 checked>
+        <label for="ecg_pain0">0</label>
+        <input type="radio" id='ecg_pain1' name="cells7"value=1>
+        <label for="ecg_pain1">1</label>
+        <input type="radio" id='ecg_pain2'name="cells7"value=2>
+        <label for="ecg_pain2">2</label><br><br>
+
+        <label for="HR"><b>MAXIMUM_HEART_RATE_ACHIEVED</b></label><br>
+        <input type="number" id="HR" name="cells8" value={{d}}><br>
+
+        <h2>EXCERISE INDUCED AGINA</h2>
+        <label for="yes1">YES</label>
+        <input type="radio" id="yes1" name="cells9" value=1 checked>
+        <label for="no1">NO</label>
+        <input type="radio" id="no1" name="cells9" value=0>
+
+        <label for="old_peak"><h2><b>ST depression induced by exercise relative to rest</b></h2></label>
+        <input type="number" step=0.01 id="old_peak" name="cells10" value={{e}} ><br>
+
+       <h2><b>the slope of the peak exercise ST segment</b></h2>
+       <input type="radio" id='f_color0' name="cells11" value=0 checked>
+       <label for="f_color0">0</label>
+        <input type="radio" id='f_color1' name="cells11" value=1>
+        <label for="f_color2">1</label>
+        <input type="radio" id='f_color3'name="cells11" value=2>
+        <label for="f_color3">2</label><br><br>
+        
+        <h2>VESSELS COLORED BY FLUOROSCOPY</h2>
+        <input type="radio" id="f_color0" name="cells12" value=0 checked>
+        <label for="f_color0">0</label>
+        <input type="radio" id="f_color1" name="cells12" value=1>
+        <label for="f_color1">1</label>
+        <input type="radio" id="f_color2"name="cells12" value=2>
+        <label for="f_color2">2</label>
+        <input type="radio" id="f_color3"name="cells12" value=3>
+        <label for="f_color3">3</label><br><br>
+
+
+        <h2>THAL</h2>
+        <label for="thal1">1</label>
+        <input type="radio" id="thal1" name="cells13" value=1 checked>
+        <label for="thal2">2</label>
+        <input type="radio" id="thal2" name="cells13" value=2 >
+        <label for="thal3">3</label>
+        <input type="radio" id="thal3" name="cells13" value=3 ><br><br>
+
+
+        <input type="submit" value="{{message}}">
+       </form>  
+    </body>
+</html>
